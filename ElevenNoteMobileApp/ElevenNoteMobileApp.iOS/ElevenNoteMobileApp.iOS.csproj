@@ -134,6 +134,12 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ElevenNote.Models\ElevenNote.Models.csproj">
+      <Project>{934b65ef-bb89-4538-a573-8019cd57282a}</Project>
+      <Name>ElevenNote.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\ElevenNoteMobileApp\ElevenNoteMobileApp.projitems" Label="Shared" Condition="Exists('..\ElevenNoteMobileApp\ElevenNoteMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
