@@ -1,4 +1,5 @@
 ﻿using ElevenNoteMobileApp.Contracts;
+using ElevenNoteMobileApp.Pages;
 using ElevenNoteMobileApp.Services;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace ElevenNoteMobileApp
 		{
 			InitializeComponent();
 
-			MainPage = new ElevenNoteMobileApp.MainPage();
+            this.MainPage = new NavigationPage(new LoginPage());
 		}
 
 		protected override void OnStart ()
