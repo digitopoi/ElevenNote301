@@ -16,5 +16,12 @@ namespace ElevenNoteMobileApp.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void BtnLogin_OnClicked(object sender, EventArgs e)
+        {
+            pleaseWait.IsRunning = true;
+            await DisplayAlert("Whoa!", "You clicked login!", "Sweet!");
+            pleaseWait.IsRunning = false;
+        }
+    }
 }
