@@ -17,6 +17,7 @@ namespace ElevenNoteMobileApp.Pages
 		public NotesPage ()
 		{
 			InitializeComponent ();
+            SetupUi();
 		}
 
         /// <summary>
@@ -49,7 +50,63 @@ namespace ElevenNoteMobileApp.Pages
                     lvwNotes.SelectedItem = null;
 
                 }, TaskScheduler.FromCurrentSynchronizationContext());
+        }
 
+        /// <summary>
+        /// Whenever the view appears, updates the notes list.
+        /// </summary>
+        protected override async void OnAppearing()
+        {
+            await PopulateNotesList();
+            lblNoNotes.IsVisible = !Notes.Any();
+        }
+
+        private void LvwNotes_OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            // Load the note detail page.
+            if (args.SelectedItem != null)
+            {
+                var note = args.SelectedItem as NoteListItemViewModel;
+                Navigation.PushAsync(new NoteDetailPage(note.NoteId));
+            }
+        }
+
+
+        private void SetupUi()
+        {
+            //  wire up refreshing
+            lvwNotes.IsPullToRefreshEnabled = true;
+            lvwNotes.Refreshing += async (o, args) =>
+            {
+                await PopulateNotesList();
+                lvwNotes.IsRefreshing = false;
+                lblNoNotes.IsVisible = !Notes.Any();
+            };
+
+            //  Add "New Note" icon to title bar
+            this.ToolbarItems.Add(new ToolbarItem("Add", null, async () =>
+            {
+                await Navigation.PushAsync(new NoteDetailPage(null));
+            }));
+
+            this.ToolbarItems.Add(new ToolbarItem("Log Out", null, async () =>
+            {
+                if (await DisplayAlert("Well?", "Are you sure you want to quit back to the login screen?", "Yep", "Nope"))
+                {
+                    await Navigation.PopAsync(true);
+                }
+
+            }));     
+        }
+
+        private void LvwNotes_OnItemsSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            //  Load the note detail page
+            if (args.SelectedItem != null)
+            {
+                var note = args.SelectedItem as NoteListItemViewModel;
+                Navigation.PushAsync(new NoteDetailPage(note.NoteId));
+            }
         }
     }
 }

@@ -9,11 +9,11 @@ using System.Text;
 using Xamarin.Forms;
 
 //  Define dependencies for injection
-#if DEBUG
-[assembly: Dependency(typeof(FakeNoteService))]
-#else
+//#if DEBUG
 [assembly: Dependency(typeof(RealNoteService))]
-#endif
+//#else
+//[assembly: Dependency(typeof(RealNoteService))]
+//#endif
 namespace ElevenNoteMobileApp
 {
     

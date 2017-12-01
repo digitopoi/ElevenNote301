@@ -4,14 +4,14 @@
              x:Class="ElevenNoteMobileApp.Pages.NotesPage">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="10">
-            <ListView x:Name="lvwNotes">
+            <ListView x:Name="lvwNotes" ItemSelected="LvwNotes_OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell ImageSource="{Binding StarImage}" Text="{Binding Title}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label Text="You don't have any notes. Why don't you add one?" x:Name="lblNotes" IsVisible="False"/>
+            <Label Text="You don't have any notes. Why don't you add one?" x:Name="lblNoNotes" IsVisible="False"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Web", "ElevenNote.Web\ElevenNote.Web.csproj", "{AC97D4E3-F17B-467B-98A0-149FF469CBD6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Services", "ElevenNote.Services\ElevenNote.Services.csproj", "{0A31EF57-EA37-4CD3-9A45-21A7A0979F5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevenNote.Models", "ElevenNote.Models\ElevenNote.Models.csproj", "{934B65EF-BB89-4538-A573-8019CD57282A}"
@@ -40,20 +38,6 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{AC97D4E3-F17B-467B-98A0-149FF469CBD6}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{0A31EF57-EA37-4CD3-9A45-21A7A0979F5C}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{0A31EF57-EA37-4CD3-9A45-21A7A0979F5C}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{0A31EF57-EA37-4CD3-9A45-21A7A0979F5C}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
