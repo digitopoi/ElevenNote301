@@ -5,9 +5,11 @@ import { NgModule } from '@angular/core';
 import { AuthService } from './services/auth.service';
 
 //  Material Components
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material';
 import 'hammerjs';
+import { MatToolbarModule,
+         MatButtonModule } from '@angular/material';
+
+//  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //  Components
 import { AppComponent } from './app.component';
