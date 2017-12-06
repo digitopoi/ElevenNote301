@@ -2,25 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-//  Services
+// Services
 import { AuthService } from './services/auth.service';
 
-//  Material Components
+// Material Components
 import 'hammerjs';
 import { MatToolbarModule,
+         MatButtonModule,
          MatFormFieldModule,
-         MatInputModule,
-         MatButtonModule } from '@angular/material';
-
+         MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//  Components
+// Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterComponent } from './components/register/register.component';
 
 const routes = [
+  { path: 'home', component: AppComponent},
   { path: 'register', component: RegisterComponent },
   { path: '**', component: RegisterComponent }
 ];
@@ -38,7 +39,9 @@ const routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     MatToolbarModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule
   ],
