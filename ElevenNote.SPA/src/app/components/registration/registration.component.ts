@@ -11,7 +11,9 @@ export class RegistrationComponent implements OnInit {
 
   private _registerForm: FormGroup;
 
-  constructor(private _form: FormBuilder) { }
+  constructor(private _form: FormBuilder) {
+    this.createForm();
+  }
 
   ngOnInit() {
   }
@@ -22,6 +24,10 @@ export class RegistrationComponent implements OnInit {
       password: new FormControl,
       confirmPassword: new FormControl
     });
+  }
+
+  onSubmit() {
+    console.log(this._registerForm.value);
   }
 
 }

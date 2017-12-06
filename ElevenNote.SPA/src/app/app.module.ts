@@ -1,14 +1,16 @@
-import { HeaderComponent } from './components/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
          MatToolbarModule,
-         MatButtonModule
+         MatButtonModule,
+         MatFormFieldModule,
+         MatInputModule
         } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
 
@@ -23,7 +25,9 @@ import { RegistrationComponent } from './components/registration/registration.co
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatFormFieldModule,
+    MatButtonModule, 
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
