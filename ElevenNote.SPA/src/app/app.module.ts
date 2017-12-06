@@ -19,10 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { NoteIndexComponent } from './components/notes/note-index/note-index.component';
 
 const routes = [
   { path: 'home', component: AppComponent},
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: RegisterComponent }
 ];
 
@@ -31,7 +34,9 @@ const routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    NoteIndexComponent
   ],
   imports: [
     BrowserModule,
